@@ -250,7 +250,7 @@ CREATE DATABASE glog_prod;
 FLUSH PRIVILEGES;
 "
 
-echo "${var.github_access_token_1}" | docker login ghcr.io -u jhs512 --password-stdin
+docker login ghcr.io -u ${var.github_access_token_1_owner} -p "${var.github_access_token_1}"
 
 END_OF_FILE
 }
