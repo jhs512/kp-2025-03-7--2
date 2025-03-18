@@ -16,7 +16,7 @@ class HomeController {
     @ResponseBody
     @Operation(summary = "메인 페이지")
     fun main(): String {
-        return "<h1>API 서버 입니다..</h1>"
+        return "<h1>API 서버 입니다..!!</h1>"
     }
 
     @GetMapping("/session")
