@@ -29,6 +29,7 @@ repositories {
 dependencies {
     // 개발/툴
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
 
     // 스프링 부트 스타터
     implementation("org.springframework.boot:spring-boot-starter-web")
