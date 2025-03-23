@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpSession
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.ResponseBody
+import java.net.InetAddress.getLocalHost
 import java.util.stream.Collectors
 import java.util.stream.Stream
 
@@ -16,7 +17,11 @@ class HomeController {
     @ResponseBody
     @Operation(summary = "메인 페이지")
     fun main(): String {
-        return "<h1>API 서버 입니다!</h1>"
+        val hostName = getLocalHost().let {
+            "${it.hostName}(${it.hostAddress})"
+        }
+
+        return "<h1>API 서버 입니다! on ${hostName}</h1>"
     }
 
     @GetMapping("/session")

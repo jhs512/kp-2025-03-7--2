@@ -28,7 +28,7 @@ repositories {
 
 dependencies {
     // 개발/툴
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
 
     // 스프링 부트 스타터
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -39,6 +39,9 @@ dependencies {
 
     // 스프링 부트 추가 기능
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.1")
+
+    // 무중단 배포
+    developmentOnly("org.springframework.boot:spring-boot-devtools")
 
     // DB
     runtimeOnly("com.h2database:h2")
